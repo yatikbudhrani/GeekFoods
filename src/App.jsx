@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes, Outlet } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Quotes from "./components/Quotes/Quotes";
@@ -14,11 +19,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/quote" element= {<Quotes/>} />
-          <Route path="/restaurants" element = {<Restaurants/>}/>
-          <Route path="/foods" element = {<Food/>}>
-          </Route>
-          <Route path="/foods/:categoryId" element = {<FoodCategory/>}/>
+          <Route path="/quote" element={<Quotes />} />
+          <Route path="/restaurants" element={<Restaurants />} />
+          <Route path="/foods" element={<Food />}></Route>
+          <Route path="/foods/:categoryId" element={<FoodCategory />} />
         </Routes>
         <Footer />
       </div>

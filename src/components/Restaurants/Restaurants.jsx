@@ -15,7 +15,10 @@ const Restaurants = () => {
   };
 
   const filteredRestaurants = resData.filter((res) => {
-    return parseInt(res.rating) === rating && res.name.toLowerCase().includes(restaurant.toLowerCase());
+    return (
+      parseInt(res.rating) === rating &&
+      res.name.toLowerCase().includes(restaurant.toLowerCase())
+    );
   });
 
   return (
@@ -51,7 +54,6 @@ const Restaurants = () => {
               rating={ele.rating}
               foodType={ele.type_of_food}
               share={ele.URL}
-          
             />
           ))}
         </div>
